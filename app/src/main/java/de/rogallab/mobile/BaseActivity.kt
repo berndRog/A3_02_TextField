@@ -14,71 +14,60 @@ open class BaseActivity(
    override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(savedInstanceState)
       if (savedInstanceState == null)
-         Log.i(_tag, "onCreate() Bundle == null")
+         logInfo(_tag, "onCreate() Bundle == null")
       else
-         Log.i(_tag, "onCreate() Bundle != null")
+         logInfo(_tag, "onCreate() Bundle != null")
    }
 
    // Activity is restarted
    override fun onRestart() {
       super.onRestart()
-      Log.i(_tag, "onRestart()")
+      logInfo(_tag, "onRestart()")
    }
 
    // Activity is visible
    override fun onStart() {
       super.onStart()
-      Log.i(_tag, "onStart()")
+      logInfo(_tag, "onStart()")
    }
 
    // Activity interacts with the user
    override fun onResume() {
       super.onResume()
-      Log.i(_tag, "onResume()")
+      logInfo(_tag, "onResume()")
    }
 
    // User is leaving activity
    override fun onPause() {
-      Log.i(_tag, "onPause()")
+      logInfo(_tag, "onPause()")
       super.onPause()
    }
 
    // Activity is no longer visible
    override fun onStop() {
-      Log.i(_tag, "onStop()")
+      logInfo(_tag, "onStop()")
       super.onStop()
    }
 
    // Called before the activity is destroyed.
    override fun onDestroy() {
-      Log.i(_tag, "onDestroy()")
+      logInfo(_tag, "onDestroy()")
       super.onDestroy()
    }
 
    // Save instance state: invoked when the activity may be temporarily destroyed,
    override fun onSaveInstanceState(savedStateBundle: Bundle) {
       super.onSaveInstanceState(savedStateBundle)
-      Log.i(_tag, "onSaveInstanceState()")
+      logInfo(_tag, "onSaveInstanceState()")
    }
 
    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
       super.onRestoreInstanceState(savedInstanceState)
-      Log.i(_tag, "onRestoreInstanceState()")
-   }
-
-   override fun onConfigurationChanged(newConfig: Configuration) {
-      super.onConfigurationChanged(newConfig)
-
-      // Checks the orientation of the screen
-      if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-         Log.i(_tag, "landscape")
-      } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-         Log.i(_tag, "portrait")
-      }
+      logInfo(_tag, "onRestoreInstanceState()")
    }
 
    override fun onWindowFocusChanged(hasFocus: Boolean) {
-      Log.i(_tag, "onWindowFocusChanged() $hasFocus")
+      logInfo(_tag, "onWindowFocusChanged() $hasFocus")
       super.onWindowFocusChanged(hasFocus)
    }
 }

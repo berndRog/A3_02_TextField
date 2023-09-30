@@ -1,7 +1,6 @@
 package de.rogallab.mobile
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
@@ -27,13 +26,13 @@ class MainActivity : BaseActivity(TAG) {
          var name    by rememberSaveable { mutableStateOf("") }
          var isError by rememberSaveable { mutableStateOf(false) }
 
-         AppTheme() {
+         AppTheme {
 
             Surface(
                modifier = Modifier.fillMaxSize(),
                color = MaterialTheme.colorScheme.background) {
 
-               Log.d("ok>ComposeView        .", "Composition")
+               logInfo("ok>ComposeView        .", "Composition")
 //             RegisterScreen1()
 //             RegisterScreen2()
 
@@ -49,7 +48,10 @@ class MainActivity : BaseActivity(TAG) {
       }
    }
 
-   companion object {        //12345678901234567890123
+   companion object {
+      const val isInfo = true
+      const val isDebug = true
+      //12345678901234567890123
       private const val TAG = "ok>MainActivity       ."
    }
 }

@@ -44,8 +44,8 @@ fun PreviewRegisterScreen3() {
 @Composable
 fun PreviewRegisterContent() {
 
-   var name    by rememberSaveable { mutableStateOf("") }
-   var isError by rememberSaveable { mutableStateOf(false) }
+   val name    by rememberSaveable { mutableStateOf("") }
+   val isError by rememberSaveable { mutableStateOf(false) }
 
    RegisterContent(
       name = name,                         // State ↓
