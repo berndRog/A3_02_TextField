@@ -33,9 +33,9 @@ fun PreviewRegisterScreen3() {
 
    RegisterScreen3(
       name = name,
-      onNameChange = { it -> name = it },
+      onNameChange = { name = it },
       isErrorInName = isError,
-      onIsErrorChange = { it -> isError = it}
+      onIsErrorChange = { isError = it}
    )
 
 }

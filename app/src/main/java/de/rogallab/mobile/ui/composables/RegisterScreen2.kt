@@ -51,7 +51,7 @@ fun RegisterContent(
 
       TextField(
          value = name,                      // State
-         onValueChange = { it ->
+         onValueChange = {
             onNameChange   (it)             // Event ↑
             onIsErrorChange(it.length > 20) // Event ↑
          },

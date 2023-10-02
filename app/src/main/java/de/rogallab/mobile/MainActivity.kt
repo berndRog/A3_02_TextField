@@ -38,9 +38,9 @@ class MainActivity : BaseActivity(TAG) {
 
                RegisterScreen3(
                   name = name,
-                  onNameChange = { it -> name = it },
+                  onNameChange = { name = it },
                   isErrorInName = isError,
-                  onIsErrorChange = { it -> isError = it}
+                  onIsErrorChange = { isError = it}
                )
 
             }
@@ -59,7 +59,7 @@ class MainActivity : BaseActivity(TAG) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-   AppTheme() {
+   AppTheme {
       Surface(
          modifier = Modifier.fillMaxSize(),
          color = MaterialTheme.colorScheme.background

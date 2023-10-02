@@ -1,8 +1,6 @@
 package de.rogallab.mobile
 
-import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 
 open class BaseActivity(
