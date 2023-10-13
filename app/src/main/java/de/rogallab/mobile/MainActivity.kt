@@ -2,6 +2,7 @@ package de.rogallab.mobile
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -14,33 +15,40 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import de.rogallab.mobile.ui.composables.RegisterScreen1
 import de.rogallab.mobile.ui.composables.RegisterScreen3
+import de.rogallab.mobile.ui.composables.RegisterScreen4
 import de.rogallab.mobile.ui.theme.AppTheme
 
 class MainActivity : BaseActivity(TAG) {
+
+   private val _viewModel:MainViewModel by viewModels()
 
    override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(savedInstanceState)
 
       setContent {
 
-         var name    by rememberSaveable { mutableStateOf("") }
+//       var name    by rememberSaveable { mutableStateOf("") }
          var isError by rememberSaveable { mutableStateOf(false) }
 
-         AppTheme {
+         logDebug("ok>ComposeView        .", "Composition")
 
+         AppTheme {
             Surface(
                modifier = Modifier.fillMaxSize(),
                color = MaterialTheme.colorScheme.background) {
 
-               logInfo("ok>ComposeView        .", "Composition")
 //             RegisterScreen1()
 //             RegisterScreen2()
+//             RegisterScreen3(
+//                name = name,
+//                onNameChange = { name = it },
+//                isErrorInName = isError,
+//                onIsErrorChange = { isError = it}
+//             )
 
-               RegisterScreen3(
-                  name = name,
-                  onNameChange = { name = it },
-                  isErrorInName = isError,
-                  onIsErrorChange = { isError = it}
+               RegisterScreen4(
+                  name = _viewModel.name,
+                  onNameChange = { _viewModel.onNameChange(it) }
                )
 
             }

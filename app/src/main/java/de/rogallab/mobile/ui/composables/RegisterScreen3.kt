@@ -1,9 +1,12 @@
 package de.rogallab.mobile.ui.composables
 
-import android.util.Log
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
+import de.rogallab.mobile.logDebug
 
 @Composable
 fun RegisterScreen3(
@@ -13,7 +16,7 @@ fun RegisterScreen3(
    onIsErrorChange: (Boolean)->Unit  // Event ↑
 ) {
 
-   Log.d("ok>RegisterScreen3    .", "Composition {$name}")
+   logDebug("ok>RegisterScreen3    .", "Composition {$name}")
 
    RegisterContent(
       name = name,                         // State ↓
