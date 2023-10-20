@@ -7,10 +7,13 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel: ViewModel() {
 
+   // field = state observer
    private var _name: String by mutableStateOf( value = "" )
-   val name: String                      // getter
+   // getter
+   val name: String
       get() = _name
-   fun onNameChange(value: String) {     // setter as function
+   // setter as function
+   fun onNameChange(value: String) {
       logDebug("ok>MainViewModel","onNameChange $value")
       if(value != _name) _name = value // setter
    }

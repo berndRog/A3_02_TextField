@@ -27,8 +27,7 @@ class MainActivity : BaseActivity(TAG) {
 
       setContent {
 
-//       var name    by rememberSaveable { mutableStateOf("") }
-         var isError by rememberSaveable { mutableStateOf(false) }
+         var name by rememberSaveable { mutableStateOf("") }
 
          logDebug("ok>ComposeView        .", "Composition")
 
@@ -41,16 +40,12 @@ class MainActivity : BaseActivity(TAG) {
 //             RegisterScreen2()
 //             RegisterScreen3(
 //                name = name,
-//                onNameChange = { name = it },
-//                isErrorInName = isError,
-//                onIsErrorChange = { isError = it}
+//                onNameChange = { name = it }
 //             )
-
                RegisterScreen4(
                   name = _viewModel.name,
                   onNameChange = { _viewModel.onNameChange(it) }
                )
-
             }
          }
       }

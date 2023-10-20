@@ -19,8 +19,9 @@ import de.rogallab.mobile.logDebug
 
 @Composable
 fun RegisterScreen1() {
-
+   // name is the result of the user input -> state hoisting
    var name by rememberSaveable { mutableStateOf("") }
+   // isErrorInName is used for UI visibility only -> save local
    var isErrorInName by remember { mutableStateOf(false) }
 
    Column(modifier = Modifier
