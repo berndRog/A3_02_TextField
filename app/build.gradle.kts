@@ -51,34 +51,34 @@ android {
 
 dependencies {
 
-   // https://developer.android.com/jetpack/androidx/releases/activity
-   val activityCompose = "1.8.0"
-   implementation("androidx.activity:activity-compose:$activityCompose")
+   // https://kotlinlang.org/docs/releases.html
+   val kotlinCoroutines = "1.8.1"
+   implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutines")
+   implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutines")
 
    // https://developer.android.com/jetpack/androidx/releases/core
-   val core = "1.12.0"
+   val core = "1.13.1"
    implementation("androidx.core:core-ktx:$core")
 
-   // https://developer.android.com/jetpack/androidx/releases/lifecycle
-   val lifecycle = "2.6.2"
-   // val archVersion = "2.2.0"
-   implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle")
+   // https://developer.android.com/jetpack/androidx/releases/activity
+   val activityCompose = "1.9.0"
+   implementation("androidx.activity:activity-compose:$activityCompose")
 
-
-   // A BOM is a Maven module that declares a set of libraries with their versions.
-   // It will greatly simplify the way you define Compose library versions in your
-   // Gradle dependencies block.
-   implementation(platform("androidx.compose:compose-bom:2023.10.01"))
+   // Compose
+   implementation(platform("androidx.compose:compose-bom:2024.06.00"))
    implementation("androidx.compose.ui:ui")
    implementation("androidx.compose.ui:ui-graphics")
    implementation("androidx.compose.ui:ui-tooling-preview")
-   val material3 = "1.1.2"
+   val material3 = "1.2.1"
    implementation("androidx.compose.material3:material3:$material3")
 
-   // https://kotlinlang.org/docs/releases.html
-   val kotlinCoroutines = "1.7.3"
-   implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutines")
-   implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutines")
+
+   // https://developer.android.com/jetpack/androidx/releases/lifecycle
+   val lifecycle = "2.8.3"
+   // val archVersion = "2.2.0"
+   implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle")
+   implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle")
+   implementation("androidx.lifecycle:lifecycle-viewmodel-compose-android:$lifecycle")
 
 
    // TESTS -----------------------
@@ -86,36 +86,36 @@ dependencies {
 
    // ANDROID TESTS ---------------
    // https://developer.android.com/jetpack/androidx/releases/test
-   val androidTestCore = "1.5.0"
+   val androidTestCore = "1.6.1"
    // To use the androidx.test.core APIs
    androidTestImplementation("androidx.test:core:$androidTestCore")
    androidTestImplementation("androidx.test:core-ktx:$androidTestCore")
 
    // To use the androidx.test.espresso
-   val espresso = "3.5.1"
+   val espresso = "3.6.1"
    androidTestImplementation("androidx.test.espresso:espresso-core:$espresso")
 
    // To use the JUnit Extension APIs
-   val extJunit = "1.1.5"
+   val extJunit = "1.2.1"
    androidTestImplementation("androidx.test.ext:junit:$extJunit")
    androidTestImplementation("androidx.test.ext:junit-ktx:$extJunit")
 
    // To use the Truth Extension APIs
-   val truth = "1.5.0"
+   val truth = "1.6.0"
    androidTestImplementation("androidx.test.ext:truth:$truth")
 
    // To use the androidx.test.runner APIs
-   val runner = "1.5.2"
+   val runner = "1.6.1"
    androidTestImplementation("androidx.test:runner:$runner")
 
    // Kotlin coroutines
    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinCoroutines")
 
    // To use Compose Testing
-   androidTestImplementation(platform("androidx.compose:compose-bom:2023.10.01"))
+   androidTestImplementation(platform("androidx.compose:compose-bom:2024.06.00"))
    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
    debugImplementation("androidx.compose.ui:ui-tooling")
-   val uiTestManifest = "1.5.4"
+   val uiTestManifest = "1.6.8"
    debugImplementation("androidx.compose.ui:ui-test-manifest:$uiTestManifest")
 
 }

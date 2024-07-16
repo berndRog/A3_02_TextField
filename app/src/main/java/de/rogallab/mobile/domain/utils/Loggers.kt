@@ -1,4 +1,4 @@
-package de.rogallab.mobile
+package de.rogallab.mobile.domain.utils
 
 import android.util.Log
 import de.rogallab.mobile.MainActivity.Companion.isDebug

@@ -15,5 +15,6 @@ dependencyResolutionManagement {
    }
 }
 
-rootProject.name = "A3_02_ComposeStateHoisting"
+
+rootProject.name = "A3_02_TextField"
 include(":app")

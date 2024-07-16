@@ -1,7 +1,8 @@
-package de.rogallab.mobile
+package de.rogallab.mobile.ui.base
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import de.rogallab.mobile.domain.utils.logInfo
 
 open class BaseActivity(
    private val _tag: String
