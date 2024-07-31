@@ -10,8 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import de.rogallab.mobile.domain.utils.logDebug
 import de.rogallab.mobile.ui.base.BaseActivity
-import de.rogallab.mobile.ui.features.people.composables.PersonInputScreenLocal
-import de.rogallab.mobile.ui.features.people.composables.PersonInputScreenViewModel
+import de.rogallab.mobile.ui.features.people.composables.PersonScreenLocal
+import de.rogallab.mobile.ui.features.people.composables.PersonScreenViewModel
 import de.rogallab.mobile.ui.theme.AppTheme
 
 class MainActivity : BaseActivity(TAG) {
@@ -28,7 +28,7 @@ class MainActivity : BaseActivity(TAG) {
                color = MaterialTheme.colorScheme.background
             ) {
 
-               PersonInputScreenViewModel(   )
+               PersonScreenViewModel(   )
             }
          }
       }
@@ -50,7 +50,7 @@ fun PreviewPersonInputScreenLocal() {
          modifier = Modifier.fillMaxSize(),
          color = MaterialTheme.colorScheme.background
       ) {
-         PersonInputScreenLocal()
+         PersonScreenLocal()
       }
    }
 }
@@ -64,7 +64,7 @@ fun PreviewPersonInputScreenViewModel() {
          color = MaterialTheme.colorScheme.background
       ) {
 
-         PersonInputScreenViewModel()
+         PersonScreenViewModel()
       }
    }
 }
