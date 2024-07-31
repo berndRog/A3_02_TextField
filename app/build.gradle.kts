@@ -43,14 +43,15 @@ android {
       kotlinCompilerExtensionVersion = "1.5.3"
    }
    packaging {
-      resources {
-         excludes += "/META-INF/{AL2.0,LGPL2.1}"
-      }
+//      resources {
+//         excludes += "/META-INF/{AL2.0,LGPL2.1}"
+//      }
    }
 }
 
 dependencies {
 
+   implementation("androidx.lifecycle:lifecycle-runtime-compose-android:2.8.4")
    // https://kotlinlang.org/docs/releases.html
    val kotlinCoroutines = "1.8.1"
    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutines")

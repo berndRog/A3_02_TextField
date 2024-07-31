@@ -10,7 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import de.rogallab.mobile.domain.utils.logDebug
 import de.rogallab.mobile.ui.base.BaseActivity
-import de.rogallab.mobile.ui.features.people.composables.PersonInputScreen
+import de.rogallab.mobile.ui.features.people.composables.PersonInputScreenLocal
+import de.rogallab.mobile.ui.features.people.composables.PersonInputScreenViewModel
 import de.rogallab.mobile.ui.theme.AppTheme
 
 class MainActivity : BaseActivity(TAG) {
@@ -26,29 +27,44 @@ class MainActivity : BaseActivity(TAG) {
                modifier = Modifier.fillMaxSize(),
                color = MaterialTheme.colorScheme.background
             ) {
-               PersonInputScreen()
+
+               PersonInputScreenViewModel(   )
             }
          }
       }
    }
-
    companion object {
       const val isInfo = true
       const val isDebug = true
       //12345678901234567890123
-      private const val TAG = "ok>MainActivity       ."
+      private const val TAG = "[MainActivity]"
    }
 }
 
+
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun PreviewPersonInputScreenLocal() {
    AppTheme {
       Surface(
          modifier = Modifier.fillMaxSize(),
          color = MaterialTheme.colorScheme.background
       ) {
-         PersonInputScreen()
+         PersonInputScreenLocal()
+      }
+   }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewPersonInputScreenViewModel() {
+   AppTheme {
+      Surface(
+         modifier = Modifier.fillMaxSize(),
+         color = MaterialTheme.colorScheme.background
+      ) {
+
+         PersonInputScreenViewModel()
       }
    }
 }
