@@ -1,4 +1,4 @@
-package de.rogallab.mobile.ui.features.people
+package de.rogallab.mobile.ui.people
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,12 +13,12 @@ class PeopleViewModel : ViewModel() {
    val personUiStateFlow: StateFlow<PersonUiState> = _personUiStateFlow.asStateFlow()
 
    fun onFirstNameChanged(firstName: String) {
-      _personUiStateFlow.update { it:PersonUiState ->
+      _personUiStateFlow.update { it: PersonUiState ->
          it.copy(person = it.person.copy(firstName = firstName))
       }
    }
    fun onLastNameChanged(lastName: String) {
-      _personUiStateFlow.update { it:PersonUiState ->
+      _personUiStateFlow.update { it: PersonUiState ->
          it.copy(person = it.person.copy(lastName = lastName))
       }
    }

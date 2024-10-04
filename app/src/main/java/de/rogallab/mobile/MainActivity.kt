@@ -9,9 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import de.rogallab.mobile.domain.utils.logDebug
-import de.rogallab.mobile.ui.base.BaseActivity
-import de.rogallab.mobile.ui.features.people.composables.PersonScreenLocal
-import de.rogallab.mobile.ui.features.people.composables.PersonScreenViewModel
+import de.rogallab.mobile.ui.people.composables.PersonScreenLocal
+import de.rogallab.mobile.ui.people.composables.PersonScreenViewModel
 import de.rogallab.mobile.ui.theme.AppTheme
 
 class MainActivity : BaseActivity(TAG) {

@@ -1,4 +1,4 @@
-package de.rogallab.mobile.ui.features.people.composables
+package de.rogallab.mobile.ui.people.composables
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,7 +11,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import de.rogallab.mobile.ui.features.people.PeopleViewModel
+import de.rogallab.mobile.ui.people.PeopleViewModel
 
 @Composable
 fun PersonScreenLocal(
