@@ -42,12 +42,12 @@ fun PersonScreenViewModel(
    Column(modifier = Modifier.padding(all = 8.dp).fillMaxSize()) {
       InputName(
          name = personUiState.person.firstName,
-         onNameChange = viewModel::onFirstNameChanged,
+         onNameChange = viewModel::onFirstNameChange,
          label = "Vorname"
       )
       InputName(
          name = personUiState.person.lastName,
-         onNameChange = viewModel::onLastNameChanged,
+         onNameChange = viewModel::onLastNameChange,
          label = "Nachname"
       )
    }

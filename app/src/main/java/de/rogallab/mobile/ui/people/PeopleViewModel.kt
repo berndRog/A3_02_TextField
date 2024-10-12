@@ -12,14 +12,15 @@ class PeopleViewModel : ViewModel() {
    private val _personUiStateFlow: MutableStateFlow<PersonUiState> = MutableStateFlow(PersonUiState())
    val personUiStateFlow: StateFlow<PersonUiState> = _personUiStateFlow.asStateFlow()
 
-   fun onFirstNameChanged(firstName: String) {
+   fun onFirstNameChange(firstName: String) {
       _personUiStateFlow.update { it: PersonUiState ->
          it.copy(person = it.person.copy(firstName = firstName))
       }
    }
-   fun onLastNameChanged(lastName: String) {
+   fun onLastNameChange(lastName: String) {
       _personUiStateFlow.update { it: PersonUiState ->
          it.copy(person = it.person.copy(lastName = lastName))
       }
    }
+
 }
